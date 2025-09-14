@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shri Tuljabhavani Steel Traders - Contact Us</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="simple-animations.css"/>
+<link rel="stylesheet" href="smooth-nav.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="navbar.js"></script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111a22;
+        }
+        .form-input {
+            @apply w-full bg-[#192633] text-white border border-gray-600 rounded-md h-14 px-4 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 ease-in-out;
+        }
+        .contact-item {
+            @apply flex items-center space-x-4 p-4 bg-[#192633] rounded-lg;
+        }
+        .contact-icon {
+            @apply flex-shrink-0 w-10 h-10 flex items-center justify-center bg-[#233648] rounded-full text-white;
+        }
+        .sticky-button {
+            @apply fixed bottom-0 left-0 right-0 z-20 p-4 bg-gradient-to-t from-[#111a22] to-transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#111a22] text-gray-300">
+<div class="relative min-h-screen">
+<header class="sticky top-0 z-50 bg-[#111a22]/95 backdrop-blur-md border-b border-gray-800/50">
+<nav class="container mx-auto px-6 py-4 flex flex-col lg:flex-row justify-between items-center gap-6">
+<a href="index.html"><img src="images/logo.png" alt="Shri Tuljabhavani Steel Traders" class="h-10"></a>
+<div class="flex flex-wrap items-center justify-center gap-6 lg:gap-8">
+<a class="text-gray-300 hover:text-white transition-colors duration-300" href="services.html">Services</a>
+<a class="text-gray-300 hover:text-white transition-colors duration-300" href="about.html">About</a>
+<a class="text-gray-300 hover:text-white transition-colors duration-300" href="gallery.html">Gallery</a>
+<a class="text-gray-300 hover:text-white transition-colors duration-300 text-blue-400" href="contact.html">Contact</a>
+<a href="https://wa.me/919960290333?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20precision%20laser%20cutting%20services.%20Please%20provide%20details." target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-md font-bold hover:bg-blue-700 transition-colors duration-300">
+Get a Quote
+</a>
+</div>
+</nav>
+
+</header>
+<main class="container mx-auto px-4 pb-32 md:pb-16 py-8">
+<div class="text-center py-12" data-aos="fade-up">
+<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Get In Touch</h1>
+<p class="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">Ready to start your precision laser cutting project? Contact us today for professional service and exceptional results.</p>
+</div>
+
+<div class="hidden md:grid md:grid-cols-2 md:gap-16 md:max-w-7xl md:mx-auto mt-16">
+<div class="space-y-8" data-aos="fade-right">
+<form id="contact-form" class="space-y-6" action="https://formspree.io/f/xnnbyarp" method="POST">
+<div>
+<label class="sr-only" for="name">Name</label>
+<input class="w-full bg-[#192633] text-white border-2 border-gray-600 rounded-md h-14 px-4 focus:ring-blue-500 focus:border-blue-500" id="name" name="name" placeholder="Name" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="email">Email</label>
+<input class="w-full bg-[#192633] text-white border-2 border-gray-600 rounded-md h-14 px-4 focus:ring-blue-500 focus:border-blue-500" id="email" name="email" placeholder="Email" type="email"/>
+</div>
+<div>
+<label class="sr-only" for="phone">Phone</label>
+<input class="w-full bg-[#192633] text-white border-2 border-gray-600 rounded-md h-14 px-4 focus:ring-blue-500 focus:border-blue-500" id="phone" name="phone" placeholder="Phone" type="tel"/>
+</div>
+<div>
+<label class="sr-only" for="message">Message</label>
+<textarea class="w-full bg-[#192633] text-white border-2 border-gray-600 rounded-md px-4 pt-4 focus:ring-blue-500 focus:border-blue-500" id="message" name="message" placeholder="Message" rows="4"></textarea>
+</div>
+<div>
+<label class="sr-only" for="file-upload">File Upload</label>
+<div class="mt-1 flex justify-center items-center rounded-md border-2 border-dashed border-gray-600 px-6 py-10 hvr-pulse">
+<div class="text-center">
+<span class="material-symbols-outlined text-5xl text-gray-400"> upload_file </span>
+<p class="mt-2 text-sm text-gray-400">
+<span class="font-medium text-blue-400 cursor-pointer hover:text-blue-500">Click to upload</span> or drag and drop
+</p>
+<p class="text-xs text-gray-500">PDF, DXF, etc. up to 10MB</p>
+<input class="sr-only" id="file-upload" name="file-upload" type="file"/>
+</div>
+</div>
+</div>
+<button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded-xl shadow-lg hvr-pulse" type="submit">
+Send Message
+</button>
+</form>
+</div>
+
+<div class="space-y-8" data-aos="fade-left">
+<div class="space-y-4">
+<a class="contact-item hvr-float" href="https://www.google.com/maps/search/?api=1&amp;query=Rabale+Navi+Mumbai+400708" target="_blank">
+<div class="contact-icon">
+<span class="material-symbols-outlined"> location_on </span>
+</div>
+<p class="text-white">Rabale Navi Mumbai - 400708</p>
+</a>
+<a class="contact-item hvr-float" href="tel:+919960290333">
+<div class="contact-icon">
+<span class="material-symbols-outlined"> call </span>
+</div>
+<p class="text-white">+91-9960290333</p>
+</a>
+<a class="contact-item hvr-float" href="mailto:ststeeltrader@gmail.com">
+<div class="contact-icon">
+<span class="material-symbols-outlined"> email </span>
+</div>
+<p class="text-white">ststeeltrader@gmail.com</p>
+</a>
+</div>
+<div class="w-full h-80 rounded-xl overflow-hidden shadow-lg">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.339104540702!2d73.0151577!3d19.1368177!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c189a0316a1d%3A0x95bf641615c3cd30!2sShri%20Tuljabhavani%20steel%20traders%20CNC%20Plasma%20and%20Oxy%20Fuel%20Cutting!5e0!3m2!1sen!2sin!4v1693907792409!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+
+<div class="md:hidden">
+<form id="contact-form-mobile" class="space-y-6 mt-6" action="https://formspree.io/f/xnnbyarp" method="POST" data-aos="fade-up" data-aos-delay="200">
+<div>
+<label class="sr-only" for="name-mobile">Name</label>
+<input class="w-full bg-[#192633] text-white border-2 border-gray-600 rounded-md h-14 px-4 focus:ring-blue-500 focus:border-blue-500" id="name-mobile" name="name" placeholder="Name" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="email-mobile">Email</label>
+<input class="w-full bg-[#192633] text-white border-2 border-gray-600 rounded-md h-14 px-4 focus:ring-blue-500 focus:border-blue-500" id="email-mobile" name="email" placeholder="Email" type="email"/>
+</div>
+<div>
+<label class="sr-only" for="phone-mobile">Phone</label>
+<input class="w-full bg-[#192633] text-white border-2 border-gray-600 rounded-md h-14 px-4 focus:ring-blue-500 focus:border-blue-500" id="phone-mobile" name="phone" placeholder="Phone" type="tel"/>
+</div>
+<div>
+<label class="sr-only" for="message-mobile">Message</label>
+<textarea class="w-full bg-[#192633] text-white border-2 border-gray-600 rounded-md px-4 pt-4 focus:ring-blue-500 focus:border-blue-500" id="message-mobile" name="message" placeholder="Message" rows="4"></textarea>
+</div>
+<div>
+<label class="sr-only" for="file-upload-mobile">File Upload</label>
+<div class="mt-1 flex justify-center items-center rounded-md border-2 border-dashed border-gray-600 px-6 py-10 hvr-pulse">
+<div class="text-center">
+<span class="material-symbols-outlined text-5xl text-gray-400"> upload_file </span>
+<p class="mt-2 text-sm text-gray-400">
+<span class="font-medium text-blue-400 cursor-pointer hover:text-blue-500">Click to upload</span> or drag and drop
+</p>
+<p class="text-xs text-gray-500">PDF, DXF, etc. up to 10MB</p>
+<input class="sr-only" id="file-upload-mobile" name="file-upload" type="file"/>
+</div>
+</div>
+</div>
+</form>
+<div class="mt-12 space-y-4" data-aos="fade-up" data-aos-delay="400">
+<a class="contact-item hvr-float" href="https://www.google.com/maps/search/?api=1&amp;query=Rabale+Navi+Mumbai+400708" target="_blank" data-aos="fade-right" data-aos-delay="100">
+<div class="contact-icon">
+<span class="material-symbols-outlined"> location_on </span>
+</div>
+<p class="text-white">Rabale Navi Mumbai - 400708</p>
+</a>
+<a class="contact-item hvr-float" href="tel:+919960290333" data-aos="fade-right" data-aos-delay="200">
+<div class="contact-icon">
+<span class="material-symbols-outlined"> call </span>
+</div>
+<p class="text-white">+91-9960290333</p>
+</a>
+<a class="contact-item hvr-float" href="mailto:ststeeltrader@gmail.com" data-aos="fade-right" data-aos-delay="300">
+<div class="contact-icon">
+<span class="material-symbols-outlined"> email </span>
+</div>
+<p class="text-white">ststeeltrader@gmail.com</p>
+</a>
+</div>
+<div class="mt-8" data-aos="zoom-in">
+<div class="w-full h-48 rounded-xl overflow-hidden shadow-lg">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.339104540702!2d73.0151577!3d19.1368177!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c189a0316a1d%3A0x95bf641615c3cd30!2sShri%20Tuljabhavani%20steel%20traders%20CNC%20Plasma%20and%20Oxy%20Fuel%20Cutting!5e0!3m2!1sen!2sin!4v1693907792409!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+</main>
+<div class="sticky-button md:hidden">
+<button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded-xl shadow-lg hvr-pulse" type="submit" form="contact-form-mobile">
+                Send Message
+            </button>
+</div>
+<div class="fixed bottom-24 right-4 flex flex-col items-center space-y-3 z-30">
+<a class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg transform hover:scale-110 transition-transform duration-300" href="https://wa.me/919960290333?text=Hi%2C%20I%27m%20interested%20in%20your%20precision%20laser%20cutting%20services.%20Could%20you%20please%20provide%20more%20information%3F" target="_blank">
+<svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.687-1.475L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.357 1.846 6.097l-1.2 4.373 4.46-1.146z"></path></svg>
+</a>
+<a class="w-14 h-14 bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 rounded-full flex items-center justify-center text-white shadow-lg transform hover:scale-110 transition-transform duration-300" href="https://www.instagram.com/" target="_blank">
+<svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.44c-3.115 0-3.486.011-4.697.067-2.91.132-4.143 1.364-4.275 4.275-.056 1.21-.067 1.583-.067 4.697s.011 3.486.067 4.697c.132 2.91 1.365 4.143 4.275 4.275 1.21.056 1.583.067 4.697.067s3.486-.011 4.697-.067c2.91-.132 4.143-1.365 4.275-4.275.056-1.21.067-1.583.067-4.697s-.011-3.486-.067-4.697c-.132-2.91-1.365-4.143-4.275-4.275C15.486 3.614 15.115 3.603 12 3.603z"></path><path d="M12 7.272c-2.618 0-4.728 2.11-4.728 4.728s2.11 4.728 4.728 4.728 4.728-2.11 4.728-4.728-2.11-4.728-4.728-4.728zm0 7.857c-1.724 0-3.129-1.405-3.129-3.129s1.405-3.129 3.129-3.129 3.129 1.405 3.129 3.129-1.405 3.129-3.129 3.129zm6.363-8.232c-.624 0-1.13.506-1.13 1.13s.506 1.13 1.13 1.13 1.13-.506 1.13-1.13-.506-1.13-1.13-1.13z"></path></svg>
+</a>
+</div>
+</div>
+
+<footer class="bg-gradient-to-b from-[#111A22] to-[#0A1017] border-t border-gray-700/50 mt-20">
+<div class="container mx-auto px-4 py-12">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
+<div class="md:col-span-2">
+<img src="images/logo.png" alt="Shri Tuljabhavani Steel Traders" class="h-12 mb-4">
+<p class="text-gray-300 text-sm leading-relaxed max-w-md">Your trusted partner for precision laser cutting services. We deliver exceptional quality and accuracy for all your steel cutting needs.</p>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined text-blue-400 text-sm">location_on</span>
+<p class="text-gray-400 text-sm">Rabale Navi Mumbai - 400708</p>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-4">Quick Links</h4>
+<div class="space-y-2">
+<a href="index.html" class="block text-gray-400 hover:text-white text-sm transition-colors">Home</a>
+<a href="services.html" class="block text-gray-400 hover:text-white text-sm transition-colors">Services</a>
+<a href="about.html" class="block text-gray-400 hover:text-white text-sm transition-colors">About</a>
+<a href="gallery.html" class="block text-gray-400 hover:text-white text-sm transition-colors">Gallery</a>
+<a href="contact.html" class="block text-gray-400 hover:text-white text-sm transition-colors">Contact</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-4">Contact Info</h4>
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-400 text-sm">call</span>
+<a href="tel:+919960290333" class="text-gray-400 hover:text-white text-sm transition-colors">+91-9960290333</a>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-400 text-sm">email</span>
+<a href="mailto:ststeeltrader@gmail.com" class="text-gray-400 hover:text-white text-sm transition-colors">ststeeltrader@gmail.com</a>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-400 text-sm">schedule</span>
+<p class="text-gray-400 text-sm">Mon-Sat: 9AM-7PM</p>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-4">Location</h4>
+<div class="w-full h-32 rounded-lg overflow-hidden">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.339104540702!2d73.0151577!3d19.1368177!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c189a0316a1d%3A0x95bf641615c3cd30!2sShri%20Tuljabhavani%20steel%20traders%20CNC%20Plasma%20and%20Oxy%20Fuel%20Cutting!5e0!3m2!1sen!2sin!4v1693907792409!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-700/50 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-400 text-sm">© 2025 Shri Tuljabhavani Steel Traders. All rights reserved.</p>
+<div class="flex items-center gap-4">
+<a href="https://wa.me/919960290333" target="_blank" class="text-gray-400 hover:text-green-400 transition-colors">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.687-1.475L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.357 1.846 6.097l-1.2 4.373 4.46-1.146z"/></svg>
+</a>
+<a href="mailto:ststeeltrader@gmail.com" class="text-gray-400 hover:text-blue-400 transition-colors">
+<span class="material-symbols-outlined text-lg">email</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+AOS.init({
+duration: 1000,
+once: true
+});
+
+gsap.from('nav', {duration: 1, y: -50, opacity: 0});
+gsap.from('form input, form textarea', {duration: 0.8, x: -30, opacity: 0, stagger: 0.1, delay: 1});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body></html>

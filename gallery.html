@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="simple-animations.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="navbar.js"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #0f66bd;
+      }
+      .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+      }
+      .masonry-grid {
+        column-count: 2;
+        column-gap: 1rem;
+      }
+      .masonry-grid .grid-item {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        justify-content: center;
+        align-items: center;
+      }
+      .lightbox:target {
+        display: flex;
+      }
+      .lightbox-content {
+        max-width: 90%;
+        max-height: 80%;
+      }
+      .lightbox .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        text-decoration: none;
+      }
+    </style>
+<style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#111827]">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-[#111827] dark justify-between group/design-root" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<header class="sticky top-0 z-50 bg-[#111827]/95 backdrop-blur-md border-b border-gray-800/50">
+<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+<a href="index.html"><img src="images/logo.png" alt="Shri Tuljabhavani Steel Traders" class="h-10"></a>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-gray-300 hover:text-white transition-colors duration-300" href="index.html">Home</a>
+<a class="text-gray-300 hover:text-white transition-colors duration-300" href="services.html">Services</a>
+<a class="text-gray-300 hover:text-white transition-colors duration-300" href="about.html">About</a>
+<a class="text-gray-300 hover:text-white transition-colors duration-300" href="gallery.html">Gallery</a>
+<a class="text-gray-300 hover:text-white transition-colors duration-300" href="contact.html">Contact</a>
+<a href="https://wa.me/919960290333?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20precision%20laser%20cutting%20services.%20Please%20provide%20details." target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-md font-bold hover:bg-blue-700 transition-colors duration-300">
+Get a Quote
+</a>
+</div>
+<button id="mobile-menu-btn" class="lg:hidden text-white">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</nav>
+<div id="mobile-menu" class="hidden lg:hidden bg-[#111827] border-t border-gray-800">
+<div class="container mx-auto px-6 py-4 space-y-4">
+<a class="block text-gray-300 hover:text-white transition-colors py-2" href="index.html">Home</a>
+<a class="block text-gray-300 hover:text-white transition-colors py-2" href="services.html">Services</a>
+<a class="block text-gray-300 hover:text-white transition-colors py-2" href="about.html">About</a>
+<a class="block text-gray-300 hover:text-white transition-colors py-2" href="gallery.html">Gallery</a>
+<a class="block text-gray-300 hover:text-white transition-colors py-2" href="contact.html">Contact</a>
+<a href="https://wa.me/919960290333?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20precision%20laser%20cutting%20services.%20Please%20provide%20details." target="_blank" class="block w-full text-center bg-blue-600 text-white py-3 px-4 rounded-md font-bold hover:bg-blue-700 transition-colors mt-4">
+Get a Quote
+</a>
+</div>
+</div>
+
+</header>
+<main class="flex-1 py-8">
+<div class="container mx-auto px-4 mb-8">
+<div class="flex space-x-2 overflow-x-auto pb-4">
+<button class="px-4 py-2 text-sm font-medium text-white bg-gray-700/50 rounded-full flex-shrink-0">All</button>
+<button class="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-full flex-shrink-0">Mild Steel</button>
+<button class="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-full flex-shrink-0">Stainless Steel</button>
+<button class="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-full flex-shrink-0">Aluminium</button>
+<button class="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-full flex-shrink-0">Custom Projects</button>
+</div>
+</div>
+<div class="container mx-auto px-4 masonry-grid">
+<div class="grid-item relative group rounded-lg overflow-hidden hvr-grow" data-aos="zoom-in" data-aos-delay="100">
+<a href="#img1">
+<img alt="Laser Cut 5mm MS Sheet" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBajpVOd6EKT4PQ9DUhta7dtbjgnnMXpsY_-TpwYl7Hz3LgEfAiYt1skm59Dzhm8teXdipgHKUrDjwwS4Q6Rk9U7MzkFWS6Q96XvMDfmiN9agYof0ZeGVS87Yt0ByQDR6es_H_RRIYKX_CpQlVJwFQJ5np2Mx9bmqQngHsB2Y0Mne7eXmxnSpax1z8e933vsDgy7kctyCeb5wAu0zQ1xs_NEeso0aLdGSzxAChrhglQDk6YRJCoALfEc82rBTHImKLd1pvgRiQyJAA"/>
+<div class="absolute inset-0 bg-black/30 bg-blend-multiply transition-opacity duration-300 group-hover:bg-black/60"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-base font-bold text-center px-2">Laser Cut 5mm MS Sheet</p>
+</div>
+</a>
+</div>
+<div class="grid-item relative group rounded-lg overflow-hidden">
+<a href="#img2">
+<img alt="Custom Aluminium Panel" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeZn3EDvPjUrDNQe0rVwO_o7idmxpaQbhWzrr688CkmnJNhFT7ItoUXl7WknI1qgkNI0RVyT2sPKvZE2Tr3mH1IjnryP4La-ox0iUDW4M7dU8LjBZ73D2MNLhThRDBLzrny8P-guJ6eYbqfEIYJMytRQCFcwYc2ulhEeeL8B8dkutOWDl_n2WmE6dQjNRdaQU5GQ0sT5dcIb4vcnwIwg-A21JNzB1Up3_0BG23nxMJu6dsfoT52uG7vlCBEgb4DBgfAK0YQ4Kybjk"/>
+<div class="absolute inset-0 bg-black/30 bg-blend-multiply transition-opacity duration-300 group-hover:bg-black/60"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-base font-bold text-center px-2">Custom Aluminium Panel</p>
+</div>
+</a>
+</div>
+<div class="grid-item relative group rounded-lg overflow-hidden">
+<a href="#img3">
+<img alt="Stainless Steel Grill" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFsYQ3WPnfyGsK47fHs9-dGkSmlDg8Bezy70NLd6yl_pH6Xywa4ZwFsEPkeGmZ8b78jPar3p6wu1jI84Nd543xUhQ2juaQaqmc2wr7qe6Hp8smrM6ChJkjDZEjyIL9jl5bNRG1tadYXwpD-MmizJGrsVAitLSvhjHbaVl9ZTVR1UkfH54_cGCtXIM2KOkziUOW4GCe-AMLxGsQHtl1cVmSoGmdTBXFyaaD6CK49FpRMkoP3T2pgX710abkKakdm4mVKonFfEeCbHA"/>
+<div class="absolute inset-0 bg-black/30 bg-blend-multiply transition-opacity duration-300 group-hover:bg-black/60"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-base font-bold text-center px-2">Stainless Steel Grill</p>
+</div>
+</a>
+</div>
+<div class="grid-item relative group rounded-lg overflow-hidden">
+<a href="#img4">
+<img alt="Decorative Metal Screen" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRdQ1n49jQfmeLdJU2keqzc6mz-jz666_an4e7QZgOKCUbQzT5wdeZzMpfNqpzUxLSDR4DzFrcI1NI17YQtGOnLwt076Ab0VY58qrGV8M_MEht9FhSwiE6E5ZvYD6S_1dFp8he8fhRqfBOq8LFf8xROtDnOCed70z2oX9OWHrN41JOaTrx5RJURU331oqJ7Vm7XYtwttaibev4f1ulfOcGKUDWj3RNm4XsOUhxVXl2K19wauBB7DAS8Ft3Xqzi14UOuXCNyqdHdkE"/>
+<div class="absolute inset-0 bg-black/30 bg-blend-multiply transition-opacity duration-300 group-hover:bg-black/60"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-base font-bold text-center px-2">Decorative Metal Screen</p>
+</div>
+</a>
+</div>
+<div class="grid-item relative group rounded-lg overflow-hidden">
+<a href="#img5">
+<img alt="Industrial Machine Parts" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzBS6nWETxbDLfXsQBz7iBFGKGIem5rMsw91DKk7Esylf0W4rimdxUAvG-GTijqbx111kHNCAZFikqy8N2LsFVZkljsXWJFinF9eKKm7Em7MzqZ23VeeIbPjmkt13oOD1jIBVKcXZ_8OWI7BB7gsgoMhwirqVMhwscSDo9tf0OosEv4v8PNKBjT-k4upRyLjd7S5FopkCEGtK20r8tp_QyofzvlyJyA1HddkxB27dZ-1cPpw04iQRV3gvCkVfMmI-yKhklqPdyoWk"/>
+<div class="absolute inset-0 bg-black/30 bg-blend-multiply transition-opacity duration-300 group-hover:bg-black/60"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-base font-bold text-center px-2">Industrial Machine Parts</p>
+</div>
+</a>
+</div>
+<div class="grid-item relative group rounded-lg overflow-hidden">
+<a href="#img6">
+<img alt="Automotive Components" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgsVEAaCf00Yh5rhJcz-pOtVcO6dVnaU6vc88a3nfD0BNn3qcW3fetvou92KHlDpoW8g-t7vMnjYGicDnP8fd31UoI19B2CvkXmr8LLZu7d-I93ogxUDB57DFOfCh5v5fp0M3iWLB0rFAiLgi4L8AsgtjEO_AmfExxB-RLYLvHSPVTTDIe-PMw30vf8XSmC8E6nUKDDou9X5pdT5klvaoUnsPXcxpJEgWlLf7lHve0Lk13pQAZNpSPRfmj9L8h9JJvkNALL4yUwWI"/>
+<div class="absolute inset-0 bg-black/30 bg-blend-multiply transition-opacity duration-300 group-hover:bg-black/60"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-base font-bold text-center px-2">Automotive Components</p>
+</div>
+</a>
+</div>
+</div>
+<div class="lightbox" id="img1">
+<a class="close" href="#">×</a>
+<img alt="Laser Cut 5mm MS Sheet" class="lightbox-content" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBajpVOd6EKT4PQ9DUhta7dtbjgnnMXpsY_-TpwYl7Hz3LgEfAiYt1skm59Dzhm8teXdipgHKUrDjwwS4Q6Rk9U7MzkFWS6Q96XvMDfmiN9agYof0ZeGVS87Yt0ByQDR6es_H_RRIYKX_CpQlVJwFQJ5np2Mx9bmqQngHsB2Y0Mne7eXmxnSpax1z8e933vsDgy7kctyCeb5wAu0zQ1xs_NEeso0aLdGSzxAChrhglQDk6YRJCoALfEc82rBTHImKLd1pvgRiQyJAA"/>
+</div>
+<div class="lightbox" id="img2">
+<a class="close" href="#">×</a>
+<img alt="Custom Aluminium Panel" class="lightbox-content" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeZn3EDvPjUrDNQe0rVwO_o7idmxpaQbhWzrr688CkmnJNhFT7ItoUXl7WknI1qgkNI0RVyT2sPKvZE2Tr3mH1IjnryP4La-ox0iUDW4M7dU8LjBZ73D2MNLhThRDBLzrny8P-guJ6eYbqfEIYJMytRQCFcwYc2ulhEeeL8B8dkutOWDl_n2WmE6dQjNRdaQU5GQ0sT5dcIb4vcnwIwg-A21JNzB1Up3_0BG23nxMJu6dsfoT52uG7vlCBEgb4DBgfAK0YQ4Kybjk"/>
+</div>
+<div class="lightbox" id="img3">
+<a class="close" href="#">×</a>
+<img alt="Stainless Steel Grill" class="lightbox-content" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFsYQ3WPnfyGsK47fHs9-dGkSmlDg8Bezy70NLd6yl_pH6Xywa4ZwFsEPkeGmZ8b78jPar3p6wu1jI84Nd543xUhQ2juaQaqmc2wr7qe6Hp8smrM6ChJkjDZEjyIL9jl5bNRG1tadYXwpD-MmizJGrsVAitLSvhjHbaVl9ZTVR1UkfH54_cGCtXIM2KOkziUOW4GCe-AMLxGsQHtl1cVmSoGmdTBXFyaaD6CK49FpRMkoP3T2pgX710abkKakdm4mVKonFfEeCbHA"/>
+</div>
+<div class="lightbox" id="img4">
+<a class="close" href="#">×</a>
+<img alt="Decorative Metal Screen" class="lightbox-content" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRdQ1n49jQfmeLdJU2keqzc6mz-jz666_an4e7QZgOKCUbQzT5wdeZzMpfNqpzUxLSDR4DzFrcI1NI17YQtGOnLwt076Ab0VY58qrGV8M_MEht9FhSwiE6E5ZvYD6S_1dFp8he8fhRqfBOq8LFf8xROtDnOCed70z2oX9OWHrN41JOaTrx5RJURU331oqJ7Vm7XYtwttaibev4f1ulfOcGKUDWj3RNm4XsOUhxVXl2K19wauBB7DAS8Ft3Xqzi14UOuXCNyqdHdkE"/>
+</div>
+<div class="lightbox" id="img5">
+<a class="close" href="#">×</a>
+<img alt="Industrial Machine Parts" class="lightbox-content" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzBS6nWETxbDLfXsQBz7iBFGKGIem5rMsw91DKk7Esylf0W4rimdxUAvG-GTijqbx111kHNCAZFikqy8N2LsFVZkljsXWJFinF9eKKm7Em7MzqZ23VeeIbPjmkt13oOD1jIBVKcXZ_8OWI7BB7gsgoMhwirqVMhwscSDo9tf0OosEv4v8PNKBjT-k4upRyLjd7S5FopkCEGtK20r8tp_QyofzvlyJyA1HddkxB27dZ-1cPpw04iQRV3gvCkVfMmI-yKhklqPdyoWk"/>
+</div>
+<div class="lightbox" id="img6">
+<a class="close" href="#">×</a>
+<img alt="Automotive Components" class="lightbox-content" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgsVEAaCf00Yh5rhJcz-pOtVcO6dVnaU6vc88a3nfD0BNn3qcW3fetvou92KHlDpoW8g-t7vMnjYGicDnP8fd31UoI19B2CvkXmr8LLZu7d-I93ogxUDB57DFOfCh5v5fp0M3iWLB0rFAiLgi4L8AsgtjEO_AmfExxB-RLYLvHSPVTTDIe-PMw30vf8XSmC8E6nUKDDou9X5pdT5klvaoUnsPXcxpJEgWlLf7lHve0Lk13pQAZNpSPRfmj9L8h9JJvkNALL4yUwWI"/>
+</div>
+</main>
+<div class="container mx-auto px-4 mt-16">
+<div class="bg-gradient-to-br from-gray-800/70 to-gray-900/70 rounded-xl p-8 text-center shadow-xl border border-gray-700/50">
+<p class="text-xl font-semibold text-white">Want similar precision work?</p>
+<a class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg hvr-pulse" href="https://wa.me/919960290333?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20precision%20laser%20cutting%20services.%20Please%20provide%20details." target="_blank" data-aos="zoom-in">
+            Get a Quote Today
+          </a>
+</div>
+</div>
+
+<footer class="bg-gradient-to-b from-[#111A22] to-[#0A1017] border-t border-gray-700/50 mt-20">
+<div class="container mx-auto px-4 py-12">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
+<div class="md:col-span-2">
+<img src="images/logo.png" alt="Shri Tuljabhavani Steel Traders" class="h-12 mb-4">
+<p class="text-gray-300 text-sm leading-relaxed max-w-md">Your trusted partner for precision laser cutting services. We deliver exceptional quality and accuracy for all your steel cutting needs.</p>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined text-blue-400 text-sm">location_on</span>
+<p class="text-gray-400 text-sm">Rabale Navi Mumbai - 400708</p>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-4">Quick Links</h4>
+<div class="space-y-2">
+<a href="index.html" class="block text-gray-400 hover:text-white text-sm transition-colors">Home</a>
+<a href="services.html" class="block text-gray-400 hover:text-white text-sm transition-colors">Services</a>
+<a href="about.html" class="block text-gray-400 hover:text-white text-sm transition-colors">About</a>
+<a href="gallery.html" class="block text-gray-400 hover:text-white text-sm transition-colors">Gallery</a>
+<a href="contact.html" class="block text-gray-400 hover:text-white text-sm transition-colors">Contact</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-4">Contact Info</h4>
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-400 text-sm">call</span>
+<a href="tel:+919960290333" class="text-gray-400 hover:text-white text-sm transition-colors">+91-9960290333</a>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-400 text-sm">email</span>
+<a href="mailto:ststeeltrader@gmail.com" class="text-gray-400 hover:text-white text-sm transition-colors">ststeeltrader@gmail.com</a>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-400 text-sm">schedule</span>
+<p class="text-gray-400 text-sm">Mon-Sat: 9AM-7PM</p>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-4">Location</h4>
+<div class="w-full h-32 rounded-lg overflow-hidden">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.339104540702!2d73.0151577!3d19.1368177!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c189a0316a1d%3A0x95bf641615c3cd30!2sShri%20Tuljabhavani%20steel%20traders%20CNC%20Plasma%20and%20Oxy%20Fuel%20Cutting!5e0!3m2!1sen!2sin!4v1693907792409!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-700/50 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-400 text-sm">© 2025 Shri Tuljabhavani Steel Traders. All rights reserved.</p>
+<div class="flex items-center gap-4">
+<a href="https://wa.me/919960290333" target="_blank" class="text-gray-400 hover:text-green-400 transition-colors">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.687-1.475L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.357 1.846 6.097l-1.2 4.373 4.46-1.146z"/></svg>
+</a>
+<a href="mailto:ststeeltrader@gmail.com" class="text-gray-400 hover:text-blue-400 transition-colors">
+<span class="material-symbols-outlined text-lg">email</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+AOS.init({
+duration: 1000,
+once: true
+});
+
+gsap.from('nav', {duration: 1, y: -50, opacity: 0});
+gsap.from('.masonry-grid .grid-item', {duration: 1, y: 50, opacity: 0, stagger: 0.1, delay: 0.5});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</div>
+
+</body></html>

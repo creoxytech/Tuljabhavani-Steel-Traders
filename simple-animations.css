@@ -1,0 +1,13 @@
+.simple-hover { 
+  transition: all 0.3s ease; 
+}
+.simple-hover:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+}
+.simple-scale:hover { 
+  transform: scale(1.05); 
+}
+.simple-fade:hover { 
+  opacity: 0.8; 
+}
